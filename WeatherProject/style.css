@@ -1,0 +1,120 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Page background */
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-image: url("https://media.istockphoto.com/id/962500712/video/4k-tl-cloudy-sky-with-sun-rays.jpg?s=640x640&k=20&c=XQrz-Y4FIzovVlayePLhPZpHoM8-iLN7gZ_uSdnoe-8=");
+  background-size: cover;   
+}
+
+/* Main container */
+.main {
+  width: 90%;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Search box container */
+.box {
+  grid-column: 1 / -1;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+}
+
+/* Input section */
+.inp {
+  display: flex;
+  gap: 10px;
+}
+
+.inp input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+
+.inp button {
+ background: linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1));
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  
+}
+
+/* Common card styles */
+.box-city,
+.box-wind,
+.box-humidity {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease;
+}
+
+.box-city:hover,
+.box-wind:hover,
+.box-humidity:hover {
+  transform: translateY(-8px);
+}
+
+/* Images inside cards */
+.box-city img,
+.box-wind img,
+.box-humidity img {
+  width: 80px;
+  margin: 15px 0;
+}
+
+/* Headings */
+#city {
+  font-size: 1.6rem;
+}
+
+#temp,
+#wind,
+#humidity {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Description text */
+#des {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.inp button:hover{
+background: linear-gradient(135deg, #43cea2, #185a9d);
+  transform: translateY(-5px);
+  box-shadow:
+    0 12px 28px rgba(67, 206, 162, 0.6),
+    0 0 12px rgba(24, 90, 157, 0.8);
+}
+#city{
+    color: rgb(241, 166, 126);
+}
